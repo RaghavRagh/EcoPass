@@ -1,0 +1,235 @@
+.user-profile-modern {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #f4f6f9;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+
+  .profile-header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(135deg, #045d23, #3b983b);
+    padding: 50px 20px 60px;
+    color: white;
+    height: 310px;
+
+    .cover-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .profile-picture {
+      width: 120px;
+      height: 120px;
+      background-color: #fff;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 6px solid #fff;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .profile-info {
+      margin-top: 15px;
+      z-index: 1;
+      position: relative;
+
+      h2 {
+        font-size: 28px;
+        margin: 10px 0;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .edit-button {
+        margin-top: 10px;
+        display: inline-block;
+        padding: 10px 25px;
+        background: #fff;
+        color: #0074d9;
+        border-radius: 25px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s ease;
+        border: 2px solid #218838;
+
+        &:hover {
+          transform: scale(1.05); /* Slight scaling effect on hover */
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+        }
+
+        &:active {
+          transform: scale(0.98); /* Slight "press down" effect on click */
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow when clicked */
+        }
+      }
+    }
+  }
+
+  /* Profile Details Card */
+  .profile-details,
+  .edit-details-form {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      span {
+        font-weight: 500;
+        color: #333;
+      }
+    }
+
+    /* Styling the form for editing profile details */
+    .form-group {
+      margin-bottom: 15px;
+      label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #333;
+      }
+      .input-form-group {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+    }
+    
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        //border-radius: 6px;
+        font-size: 14px;
+        color: #333;
+      }
+    }
+  }
+
+  /* Edit Profile Actions */
+  .edit-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .save-button,
+    .cancel-button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .save-button {
+      background-color: #28a745;
+      color: #fff;
+
+      &:hover {
+        background-color: #218838;
+      }
+    }
+
+    .cancel-button {
+      background-color: #dc3545;
+      color: #fff;
+
+      &:hover {
+        background-color: #c82333;
+      }
+    }
+  }
+
+  .profile-body {
+    padding: 20px 40px;
+    background-color: #ffffff;
+
+    .profile-card {
+      background-color: #f4f6f9;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .profile-details {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        li {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          span {
+            font-weight: 500;
+            color: #333;
+          }
+        }
+      }
+    }
+
+
+    /* Logout Button */
+    .logout-section {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+
+      .logout-button {
+        background-color: #ff4136;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s ease;
+
+        &:hover {
+          background-color: #d63629;
+        }
+      }
+    }
+  }
+}

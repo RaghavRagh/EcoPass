@@ -1,0 +1,143 @@
+.contact-us-section {
+  text-align: center;
+    padding-top: 100px;
+    background: linear-gradient(to bottom, rgba(4, 72, 40, 0.8), var(--blue-color));
+    position: relative;
+    overflow: hidden;
+
+
+    .contact-header {
+      padding-bottom: 5px;
+  
+      h1 {
+        font-size: 3rem;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        color: #f0f0f0;
+        line-height: 1.5;
+      }
+    }
+
+    /* Wave styling */
+    .wave {
+      position: relative;
+      width: 100%;
+      height: 150px; /* Adjust this as needed */
+      overflow: hidden;
+      line-height: 0;
+  
+      svg {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+  
+      path {
+        transform: translateY(5%); /* Adjust to move wave up/down */
+      }
+    }
+}
+
+
+.contact-us-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px 0 50px;
+  background: white;
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.contact-us-left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.contact-us-image {
+  max-width: 80%;
+  height: auto;
+}
+
+.contact-us-right {
+  width: 50%;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modern-input,
+.modern-textarea {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    border-color: #5dec83;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(93, 156, 236, 0.15);
+  }
+}
+
+.modern-textarea {
+  height: 120px;
+  resize: none;
+}
+
+.modern-button {
+  background: linear-gradient(135deg, #119a31, #15775d);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background: linear-gradient(135deg, #23bc2d, #0a8a44);
+  }
+}

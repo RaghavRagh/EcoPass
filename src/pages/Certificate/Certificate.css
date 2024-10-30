@@ -1,0 +1,9 @@
+.certificate {
+    background-image: url("bg-3.jpg");
+    /* height: 132vh; */
+    width: 100%;
+    background-position: bottom;
+    z-index: -1;
+    position: absolute;
+  }
+  

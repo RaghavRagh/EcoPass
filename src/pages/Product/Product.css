@@ -1,0 +1,136 @@
+.productWrapper {
+  margin-top: 7rem;
+}
+
+.prodLeft p {
+  font-size: 17px;
+  text-align: justify;
+}
+
+.hero div {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.title {
+  color: #2c392b;
+  position: relative;
+  display: inline-block
+}
+
+#circleHero {
+  position: absolute;
+  height: 10vw;
+  width: 10vw;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #e8ebe6, #c6cfbe);
+  top: -3rem;
+  right: 10rem;
+  /* left: 26%; */
+  z-index: -10;
+  /* animation-name: heroCircle; */
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.movingText {
+  background-color: #506c4f;
+  white-space: nowrap;
+}
+
+.con {
+  white-space: nowrap;
+  display: inline-block;
+  animation: move 5s linear infinite;
+}
+
+.con h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #7f8f80;
+  display: inline-block;
+  margin: 0;
+}
+
+.circle {
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: #7f8f80;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 20px;
+  margin-bottom: 5px;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes heroCircle {
+  from {
+    transform: translate(-10%, -10%);
+  }
+
+  to {
+    transform: translate(10%, 10%);
+  }
+}
+
+.details {
+  background-color: #f9fbf3;
+}
+
+.statsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats {
+  height: 20vh;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  padding: 0.8rem;
+}
+
+.stats:nth-child(2) {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.lorem {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .con h1 {
+    font-size: 3rem;
+  }
+
+  .lorem {
+    font-size: 18px;
+  }
+
+  .stats {
+    font-size: 4.5rem;
+  }
+
+  /* .stats:nth-child(2) {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: none;
+    border-right: none  ;
+  } */
+}

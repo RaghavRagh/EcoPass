@@ -1,0 +1,270 @@
+/* Basic Navbar Styling */
+.navbarr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: white; /* Dark transparent background */
+    backdrop-filter: blur(10px); /* Blurred background */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border at the bottom */
+
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: relative; 
+    
+        .profile-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+    
+          .profile-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+    
+          .username {
+            color: var(--heading-color);
+            font-weight: bold;
+          }
+        }
+    
+      }
+}
+
+ol, ul {
+    margin-bottom: 0rem !important;
+    padding-left: 0rem !important;
+}
+
+.bi-search {
+    color: var(--green-color);
+    margin-left: 10px;
+}
+
+/* Logo Image Styling */
+.navbar-logo .nav-logo {
+    width: 40px; /* Set a fixed width for desktop */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 5px 5px 0; /* Center the logo horizontally */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); /* Add a subtle shadow for depth */
+}
+
+/* Logo Styling */
+.navbar-logo a {
+    color: var(--green-color); /* White text color initially */
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Modern font for the logo */
+}
+
+/* Hamburger Menu Icon */
+.navbar-menu-icon {
+    display: none; /* Hide on desktop */
+    font-size: 28px;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001; /* Ensure it's above the menu */
+}
+
+.navbarr.scrolled .navbar-menu-icon {
+    color: #000;
+}
+
+/* Centering Navbar Links for Desktop */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center;
+    gap: 30px; /* Increased gap between links */
+    flex-grow: 1; /* Allow the links to take up available space */
+}
+
+/* Navbar Links */
+.navbar-links li {
+    position: relative;
+}
+
+.navbar-links li a {
+    color: var(--green-color); /* White text color initially */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 6px 20px; /* Increased padding for a more spacious feel */
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Matching font with the logo */
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar-links li a:hover {
+    color: var(--green-color); /* Hover color */
+    border-color: var(--green-color); /* Border matches hover color */
+}
+
+/* Magic Line */
+.magic-line {
+    position: absolute;
+    bottom: 0;
+    height: 6px;
+    background-color: var(--green-color);
+    width: 0; /* Initial width 0, will be set dynamically */
+    left: 0; /* Initial position 0, will be set dynamically */
+    border-radius: 5px;
+    transition: left 0.4s ease, width 0.4s ease; /* Smooth animation */
+}
+
+/* Hover Effect */
+.navbar-links li a:hover {
+    color: #1DB954; /* Hover color */
+}
+
+/* Navbar when scrolled */
+.navbarr.scrolled {
+    background-color: white; /* Solid background on scroll */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow on scroll */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle bottom border on scroll */
+}
+
+.navbarr.scrolled .navbar-logo a {
+    color: var(--green-color); /* White text color on scroll */
+}
+
+.navbarr.scrolled .navbar-links li a {
+    color: var(--green-color); /* White text color on scroll */
+    border-color: transparent; /* No border on scroll */
+    font-weight: 600;
+}
+
+.navbarr.scrolled .navbar-links li a:hover {
+    color: #1DB954; /* Hover color */
+    border-color: #1DB954; /* Border matches hover color */
+}
+
+/* Active Link Styling */
+.navbar-links li a.active {
+    color: #000; /* Maintain white text color */
+    font-weight: 700;
+}
+
+.navbarr.scrolled .navbar-links li a.active {
+    color: #000; /* Maintain white color on scroll */
+    border-color: #000; /* Border color on scroll */
+}
+
+/* Responsive Design */
+
+
+/* Hide Navbar links only on mobile (use media query) */
+@media (max-width: 1024px) {
+    .navbar-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        background-color: rgba(0, 0, 0, 0.8); /* Dark background for dropdown */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for dropdown */
+        position: absolute;
+        top: 62px; /* Adjust top position */
+        left: 0;
+        padding: 10px 0;
+        z-index: 1000; /* Ensure dropdown is above other elements */
+        overflow-y: auto; /* Enable scrolling if content overflows */
+        transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show the links when the menu is active */
+        opacity: 1;
+        transform: translateX(0); /* Slide in from the left */
+    }
+
+    .navbar-links li a {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        font-size: 16px;
+        color: #fff;
+    }
+    .bi-search {
+        color: #fff;
+        margin-left: 10px;
+    }
+    .navbar-links li a.active {
+        color: #1DB954; /* Maintain white text color */
+    }
+    .navbarr.scrolled .navbar-links li a.active {
+        color: #1DB954; /* Maintain white color on scroll */
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .navbarr {
+        align-items: flex-start;
+        padding: 10px 20px;
+
+        .navbar-right {
+            display: none;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+        
+            .profile-wrapper {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+        
+              .profile-image {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+        
+              .username {
+                color: var(--heading-color);
+                font-weight: bold;
+              }
+            }
+        
+          }
+    }
+
+    .navbar-menu-icon {
+        display: block; /* Show menu icon on mobile */
+    }
+
+    .navbar-logo a {
+        font-size: 24px;
+    }
+
+    .navbarr.scrolled .navbar-links li a {
+        color: #fff; /* Text color on scroll */
+        font-weight: 500;
+    }
+
+    .navbarr.scrolled .navbar-links li a:hover {
+        border-color: #fff; /* Border matches hover color */
+        background-color: rgba(255, 255, 255, 0.1); /* Slight background change on hover */
+    }
+
+    .magic-line {
+        display: none;
+    }
+}

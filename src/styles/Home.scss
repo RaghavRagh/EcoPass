@@ -1,0 +1,443 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8f5;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+    width: 100%;
+}
+
+/* Large Screen Background Image */
+.background-img-large {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Small Screen Background Image */
+.background-img-small {
+    display: none; /* Hidden by default */
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background: rgba(0, 14, 4, 0.11); /* Subtle green overlay */
+    z-index: 1;
+}
+
+/* Text Content */
+.text-content {
+    position: absolute;
+    z-index: 2;
+    margin: 0px 0px 0px 150px;
+    width: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--green-color);
+    animation: fadeIn 1.2s ease-out;
+    text-align: left;
+}
+
+/* Adjust font sizes for larger screens */
+.text-content h1 {
+    font-size: 4vw;
+    font-weight: bold;
+    color: var(--green-color);
+}
+
+.text-content p {
+    font-size: 1.5vw;
+    margin: 1rem 0;
+    color: var(--text-color);
+}
+
+/* Simple Counter Styling */
+.counter-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.counter-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--green-color);
+}
+
+/* Modern Button Styling */
+.learn-more-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--green-color);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #388e3c;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+    .text-content {
+        width: 40%;
+        margin-left: 50px;
+    }
+
+    .text-content h1 {
+        font-size: 3.5vw;
+    }
+
+    .text-content p {
+        font-size: 1.2rem;
+    }
+
+    .counter-text {
+        font-size: 2.3rem;
+    }
+
+    .learn-more-btn {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large phones and phablets */
+@media (max-width: 768px) {
+    .background-img-large {
+        display: none; /* Hide large image on small screens */
+    }
+
+    .background-img-small {
+        display: block; /* Show small image on small screens */
+    }
+    .text-content {
+        width: 100%; /* Take up most of the screen width */
+        margin: 0; /* Center content horizontally */
+        padding: 0 10px; /* Add padding to prevent text from touching edges */
+        text-align: center; /* Center the text */
+    }
+
+    .text-content h1 {
+        font-size: 3rem;
+        line-height: 1.2; /* Adjust line-height for better readability */
+    }
+
+    .text-content p {
+        font-size: 1.2rem;
+        line-height: 1.5; /* Improve readability for paragraph text */
+    }
+
+    .counter-text {
+        font-size: 2rem;
+    }
+
+    .learn-more-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .text-content {
+        width: 100%; /* Even closer to full width */
+        margin: 0; /* Center content */
+        padding: 0 10px; /* Padding to keep content away from screen edges */
+        text-align: center;
+    }
+
+    .text-content h1 {
+        font-size: 2.5rem;
+        line-height: 1.2; /* Improve readability */
+    }
+
+    .text-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .counter-text {
+        font-size: 1.8rem;
+    }
+
+    .learn-more-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+.info-one-section {
+    text-align: center;
+    padding-top: 100px;
+    background: linear-gradient(to bottom, var(--blue-color), rgba(4, 72, 40, 0.8));
+    position: relative;
+    overflow: hidden;
+  
+    .info-one-header {
+      padding-bottom: 50px;
+  
+      h1 {
+        font-size: 3rem;
+        color: var(--green-color);
+        margin-bottom: 10px;
+      }
+  
+      p {
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        color: var(--dark-color);
+        line-height: 1.5;
+      }
+    }
+  
+    /* Wave styling */
+    .wave {
+      position: relative;
+      width: 100%;
+      height: 150px; /* Adjust this as needed */
+      overflow: hidden;
+      line-height: 0;
+  
+      svg {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+  
+      path {
+        transform: translateY(5%); /* Adjust to move wave up/down */
+      }
+    }
+  }
+
+
+/* Card Section Styling */
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    //max-width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.step-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 18%;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    border-bottom: 5px solid var(--green-color);
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+}
+
+.step-card img {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.steps-card-title {
+    color: var(--green-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+
+
+.info-second-section {
+    text-align: center;
+    //padding-top: 100px;
+    background: linear-gradient(to bottom, var(--blue-color), rgba(4, 72, 40, 0.8));
+    position: relative;
+    overflow: hidden;
+  
+    .info-second-header {
+      padding-bottom: 50px;
+  
+      h1 {
+        font-size: 3rem;
+        color: white;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        color: white;
+        line-height: 1.5;
+      }
+    }
+  
+    /* Wave styling */
+    .wave {
+      position: relative;
+      width: 100%;
+      height: 150px; /* Adjust this as needed */
+      overflow: hidden;
+      line-height: 0;
+  
+      svg {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+  
+      path {
+        transform: translateY(5%); /* Adjust to move wave up/down */
+      }
+    }
+  }
+
+  .info-section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color:#f0f8f5;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.info-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.icon-text {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.icon-text h3 {
+    color: var(--green-color);
+    margin-bottom: 10px;
+}
+
+.icon-text p {
+    color: #888;
+}
+
+.image-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.eco-image {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design: Mobile View */
+@media (max-width: 768px) {
+    .info-section-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .info-section, .image-section {
+        flex: none;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Responsive Design */
+
+/* For tablets (width less than 1024px) */
+@media (max-width: 1024px) {
+    .card-container {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .step-card {
+        width: 30%;
+    }
+}
+
+/* For mobile screens (width less than 768px) */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step-card {
+        width: 80%;
+    }
+}

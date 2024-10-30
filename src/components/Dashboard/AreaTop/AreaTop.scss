@@ -1,0 +1,74 @@
+.dashboard-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  //background-color: var(--bg-color-inverted);
+  position: fixed;
+  top: 0;
+  width: calc(100% - 250px); // Account for sidebar width when screen is large
+  left: 250px; // Align navbar next to sidebar
+  z-index: 100;
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .sidebar-open-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--xl-text-color);
+      
+      @media (max-width: 768px) {
+        display: inline-block;
+      }
+    }
+
+    .db-navbar-title {
+      color: var(--heading-color);
+      font-weight: bold;
+    }
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative; // Important to position dropdown correctly
+
+    .profile-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer; // Indicate clickable area
+
+      .profile-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .username {
+        color: var(--heading-color);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Responsive behavior for screens below 768px
+@media (max-width: 768px) {
+  .dashboard-navbar {
+    width: 100%; // Full width when sidebar is removed
+    left: 0;
+  }
+
+  .navbar-right .dropdown-menu {
+    right: 24px; // Adjust position for smaller screens if needed
+  }
+}
+

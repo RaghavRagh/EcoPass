@@ -1,0 +1,90 @@
+.dashboard-container {
+  display: flex;
+  /* Enable flexbox */
+  height: 100vh;
+  /* Full viewport height */
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  /* Make the content take the remaining space */
+  display: flex;
+  flex-direction: column;
+  /* Stack the NavBar on top of the content */
+  background-color: #f5f5f5;
+  /* Content area background color */
+  padding: 20px;
+  /* Reset padding */
+  margin: 70px 0px 0px 0px;
+  /* Reset margin */
+  overflow-y: auto;
+  //max-width: 85%;
+  //border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  /* Allow vertical scrolling if needed */
+}
+
+// Dashboard.scss
+
+.content-area {
+  margin-top: 20px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: #28a745;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+input, select, textarea {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+#addProductModal .modal-dialog {
+  max-width: 600px;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-body {
+  padding: 20px;
+}

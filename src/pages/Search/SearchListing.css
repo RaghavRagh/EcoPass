@@ -1,0 +1,39 @@
+.searchWrapper {
+  margin-top: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.searchInput {
+  width: 75%;
+  min-width: 20rem;
+}
+
+.searchInput > input {
+  border: none;
+  outline: none;
+}
+
+.searchBtn {
+  color: white;
+  border: none;
+}
+
+.page-link.active, .active > .page-link {
+  z-index: 3;
+  color: var(--green-color) !important; 
+  background-color: var(--blue-color) !important;
+  border-color: var(--blue-color) !important;
+}
+
+@media (max-width: 767.98px) {
+  .custom-width {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-width {
+    width: 75%;
+  }
+}
